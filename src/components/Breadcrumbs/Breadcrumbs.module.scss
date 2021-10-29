@@ -1,0 +1,13 @@
+@import "styles/vars&mixins.scss";
+
+.breadcrumbs {
+  margin-top: 30px;
+}
+.list {
+  @include flexbox(row, flex-start, center);
+}
+
+.breadcrumbs span {
+  margin-left: 10px;
+  margin-right: 10px;
+}

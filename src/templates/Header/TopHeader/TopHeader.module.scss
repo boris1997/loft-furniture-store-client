@@ -1,0 +1,31 @@
+@import "styles/vars&mixins.scss";
+
+.topHeader {
+  display: none;
+  background-color: $primaryColor;
+  a {
+    color: $secColor;
+  }
+  @media (min-width: $small-breakpoint) {
+    // --btn-lar-height: 3;
+    /*     .btn {
+      width: 200;
+    } */
+  }
+  @media (min-width: $tablet-breakpoint) {
+    display: block;
+    // --btn-lar-height
+  }
+}
+
+@media (min-width: $medium-breakpoint) {
+}
+@media (min-width: $large-breakpoint) {
+  // h1 {
+  //   font-size: 50px;
+  // }
+}
+.content {
+  height: 40px;
+  @include flexbox(row, space-between, space-between);
+}

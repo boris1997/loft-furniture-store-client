@@ -1,0 +1,13 @@
+@import "styles/vars&mixins.scss";
+
+.header {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  max-width: 340px;
+  width: 100%;
+  @include position(absolute, "", 0, 0, 0, 0, auto);
+}

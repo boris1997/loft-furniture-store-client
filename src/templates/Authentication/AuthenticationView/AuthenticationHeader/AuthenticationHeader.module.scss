@@ -1,0 +1,52 @@
+@import "styles/vars&mixins.scss";
+$form-header-fz-mob: 22px;
+$form-header-fz-tab: 24px;
+$form-header-fz-md: 24px;
+$form-header-fz-lar: 24px;
+
+.header {
+  --header-fz: 20px;
+  width: 100%;
+  font-size: var(--header-fz, 20px);
+  @include flexbox(row, center, center);
+  margin-bottom: 40px;
+}
+span:first-child,
+span:last-child {
+  cursor: pointer;
+}
+.disabled {
+  opacity: 0.3;
+}
+
+span + span {
+  margin-left: 10px;
+}
+
+@media (min-width: $small-breakpoint) {
+  .header {
+    justify-content: flex-start;
+    --product-font: #{$form-header-fz-mob};
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .header {
+    --product-font: #{$form-header-fz-tab};
+  }
+}
+
+@media (min-width: $medium-breakpoint) {
+  .header {
+    --product-font: #{$form-header-fz-md};
+  }
+  // h1 {
+  //   font-size: 50px;
+  // }
+}
+
+@media (min-width: $large-breakpoint) {
+  .header {
+    --product-font: #{$form-header-fz-lar};
+  }
+}

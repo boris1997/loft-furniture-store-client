@@ -1,0 +1,8 @@
+@import "styles/vars&mixins.scss";
+
+.mainNavbar {
+  @include flexbox(row, space-between, center);
+  > li + li {
+    margin-left: 30px;
+  }
+}

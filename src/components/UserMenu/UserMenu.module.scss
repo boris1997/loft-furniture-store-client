@@ -1,0 +1,37 @@
+@import "styles/vars&mixins.scss";
+
+.tooltip {
+  position: relative;
+}
+
+.userMenu {
+  @include flexbox(row, space-between, center);
+
+  // margin-right: -26px;
+
+  li + li > a > svg {
+  }
+  li {
+    position: relative;
+    height: 40px;
+    /*     flex: 1; */
+  }
+  li > a {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  span {
+    font-size: 14px;
+  }
+
+  .tooltip {
+    position: relative;
+  }
+
+  svg {
+    margin-right: 0 !important;
+    margin-bottom: 5px;
+  }
+}

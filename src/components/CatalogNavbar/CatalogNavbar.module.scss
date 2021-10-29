@@ -1,0 +1,13 @@
+@import "styles/vars&mixins.scss";
+
+.catalogNavbar {
+  height: 100%;
+  @include flexbox(row, space-between, center);
+  > li + li {
+    margin-left: 30px;
+  }
+}
+.catalogNavbarSvg {
+  height: 25px;
+  width: 25px;
+}

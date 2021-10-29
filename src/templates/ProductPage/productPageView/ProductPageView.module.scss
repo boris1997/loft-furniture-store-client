@@ -1,0 +1,39 @@
+@import "styles/vars&mixins.scss";
+
+.product {
+}
+.productBuy,
+.slider {
+  width: 100%;
+}
+
+.slider img {
+  width: 50%;
+}
+
+.main {
+  @include flexbox(column, space-between, center);
+}
+
+@media (min-width: $large-breakpoint) {
+  h1 {
+    //   font-size: 50px;
+    // }
+  }
+}
+@media (min-width: $medium-breakpoint) {
+  // h1 {
+  //   font-size: 50px;
+  // }
+}
+@media (min-width: $tablet-breakpoint) {
+  .main {
+    @include flexbox(row, space-between, center);
+  }
+  .productBuy,
+  .slider {
+    width: 45%;
+  }
+}
+@media (min-width: $small-breakpoint) {
+}

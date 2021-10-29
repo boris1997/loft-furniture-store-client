@@ -1,0 +1,15 @@
+@import "styles/vars&mixins.scss";
+
+.searchBody {
+  flex: 1;
+  position: relative;
+  border: 1px solid $borderColor;
+  height: 50px;
+  flex-basis: 100%;
+}
+.searchInput {
+  width: 100%;
+  padding-left: 50px;
+  height: 100%;
+  /*     padding-right: ; */
+}

@@ -1,0 +1,15 @@
+@import "styles/vars&mixins.scss";
+
+.navItem {
+  @include flexbox(row, space-between, center);
+}
+
+.active {
+  color: $accentColor;
+  font-weight: 600;
+  svg,
+  path {
+    fill: $accentColor;
+    stroke: $accentColor;
+  }
+}

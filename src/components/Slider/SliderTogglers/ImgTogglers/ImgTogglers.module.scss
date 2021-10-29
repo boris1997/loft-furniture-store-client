@@ -1,0 +1,13 @@
+@import "styles/vars&mixins.scss";
+
+.imgTogglers {
+  @include flexbox(row, space-between, center);
+  overflow: hidden;
+
+  div {
+    min-width: 25%;
+  }
+  img {
+    width: 100%;
+  }
+}

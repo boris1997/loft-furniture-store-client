@@ -1,0 +1,35 @@
+@import "styles/vars&mixins.scss";
+
+.header {
+  @include flexbox(row, space-between, center);
+}
+
+.title {
+  @include flexbox(row, flex-start, center);
+}
+
+.link {
+  margin-right: 15px;
+}
+
+.body {
+  @include flexbox(column, flex-start, flex-start);
+  span {
+    text-align: left;
+  }
+}
+
+.signature {
+  --sign-size: 30px;
+  margin-right: 15px;
+  width: var(--sign-size);
+  height: var(--sign-size);
+  border-radius: 100px;
+  background-color: $accentColor;
+  color: $secColor;
+  @include flexbox(column, center, center);
+}
+
+.item + .item {
+  margin-top: 10px;
+}

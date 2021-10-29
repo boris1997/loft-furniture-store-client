@@ -1,0 +1,35 @@
+@import "styles/vars&mixins.scss";
+
+.img {
+  position: relative;
+  height: 300px;
+
+  min-width: 100%;
+}
+
+.img > img {
+  width: 70%;
+  @include position(absolute, "", 0, 0, -5%, 0, auto);
+}
+
+@media (min-width: $large-breakpoint) {
+  h1 {
+    //   font-size: 50px;
+    // }
+  }
+}
+@media (min-width: $medium-breakpoint) {
+  // h1 {
+  //   font-size: 50px;
+  // }
+}
+@media (min-width: $tablet-breakpoint) {
+  .img {
+    height: 400px;
+  }
+  .img > img {
+    width: 100%;
+  }
+}
+@media (min-width: $small-breakpoint) {
+}

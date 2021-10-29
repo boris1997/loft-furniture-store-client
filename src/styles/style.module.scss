@@ -1,0 +1,135 @@
+@import "./vars&mixins.scss";
+
+/*normalize*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:root {
+  --m-fs: "Roboto";
+  --med-q-lar: 1024px;
+  --h1-fs: #{$h1-lar-scn};
+  --p-fs: #{$p-mn-lar-cn};
+  /*   --product-fz: 20px;
+  --product-fw: 500; */
+}
+
+h1 {
+  font-size: var(--h1-fs);
+}
+
+p {
+  font-size: var(--p-fs);
+}
+
+a {
+  font-size: var(--p-fs);
+}
+/* button {
+  font-size: var(13px);
+}
+ */
+@media (max-width: $large-breakpoint) {
+  :root {
+  }
+  // h1 {
+  //   font-size: 50px;
+  // }
+}
+@media (max-width: $medium-breakpoint) {
+  :root {
+    --h1-fs: #{$h1-md-scn};
+    --p-fs: #{$p-mn-md-scn};
+  }
+  // h1 {
+  //   font-size: 50px;
+  // }
+}
+@media (max-width: $tablet-breakpoint) {
+  :root {
+    --h1-fs: #{$h1-tab-scn};
+    --p-fs: #{$p-mn-tab-scn};
+  }
+}
+@media (max-width: $small-breakpoint) {
+  :root {
+    --h1-fs: #{$h1-mob-scn};
+    --p-fs: #{$p-mn-mob-scn};
+  }
+}
+/* @media (max-width: 768px) {
+  * {
+    font-size: 14px;
+  }
+} */
+/* @media (max-width: 650px) {
+  * {
+    font-size: 13px;
+  }
+} */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+b nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  color: $primaryColor;
+  line-height: 1;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+/* .body {
+  height: 100vh;
+} */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input:focus {
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: $primaryColor;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}

@@ -1,0 +1,31 @@
+.flexbox {
+  display: flex;
+}
+
+[data-direction="column"] {
+  flex-direction: column;
+}
+
+[data-direction="row"] {
+  flex-direction: row;
+}
+
+[data-alignment="ctr-ctr"] {
+  justify-content: center;
+  align-items: center;
+}
+
+[data-alignment="start-ctr"] {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+[data-alignment="ctr-start"] {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+[data-alignment="start-start"] {
+  justify-content: flex-start;
+  align-items: flex-start;
+}

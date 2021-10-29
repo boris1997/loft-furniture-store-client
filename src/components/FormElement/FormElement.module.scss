@@ -1,0 +1,43 @@
+@import "styles/vars&mixins.scss";
+
+.formElement {
+  @include flexbox(column, center, flex-start);
+
+  input {
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    padding-left: 10px;
+    &:focus {
+      + label {
+        transform: translate(-2px, -12px) scale(0.75);
+      }
+    }
+  }
+  input:not(:placeholder-shown) {
+    + label {
+      transform: translate(-2px, -12px) scale(0.75);
+    }
+  }
+
+  input::placeholder {
+    opacity: 0;
+  }
+
+  label {
+    position: absolute;
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.4;
+    padding-left: 10px;
+  }
+
+  .labelTranform {
+    transform: translate(-6px, -13px) scale(0.75);
+  }
+}
+
+.formElement + .formElement {
+  margin-top: 30px;
+}

@@ -1,0 +1,21 @@
+@import "styles/vars&mixins.scss";
+
+.body {
+  background-color: $accentColor;
+  border-radius: 100px;
+  min-width: 20px;
+  height: 20px;
+  border: 2px solid $secColor;
+  color: $secColor;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  font-weight: normal;
+  left: 51%;
+  display: flex;
+  justify-content: center;
+  padding-inline: 4px;
+
+  div {
+  }
+}

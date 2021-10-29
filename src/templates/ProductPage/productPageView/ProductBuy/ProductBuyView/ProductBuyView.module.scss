@@ -1,0 +1,123 @@
+@import "styles/vars&mixins.scss";
+
+$h1-fz-prod-mob: 20px;
+$h1-fz-prod-tab: 22px;
+$h1-fz-prod-md: 26px;
+$h1-fz-prod-lar: 30px;
+
+$h1-fw-prod: 500;
+
+.productBuy {
+  // flex: 1;
+  --product-font: 20px;
+  --product-fw: 500;
+  // @include flexbox(column, flex-start, flex-start);
+  display: flex;
+  flex-wrap: wrap;
+  h1,
+  span {
+    font-size: var(--product-font, 18px);
+    font-weight: var(--product-fw, 500);
+  }
+
+  //   width: 50%;
+}
+
+.rating {
+  display: flex;
+
+  flex-basis: 100%;
+
+  span {
+    margin-left: 6px;
+    font-size: 16px;
+  }
+}
+.addToWish {
+  margin-left: 25px;
+  svg {
+    margin-right: 8px;
+  }
+  a {
+    @include flexbox(row, center, center);
+  }
+}
+
+.addToWish .active {
+  svg,
+  path {
+    fill: $accentColor;
+  }
+}
+
+.ratingIndex {
+}
+
+.description {
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.callToAction {
+  flex-wrap: wrap;
+  @include flexbox(row, flex-start, center);
+  flex-basis: 100%;
+  margin-top: 10px;
+}
+.btn {
+  width: 143px;
+}
+.price {
+  font-size: 28px;
+  font-weight: 500;
+  flex-basis: 100%;
+}
+
+.price > span {
+  float: left;
+}
+
+.buy,
+.addToWish {
+  flex-basis: 35%;
+  margin-top: 20px;
+}
+
+.buy > button {
+  width: 100%;
+}
+
+.productBuy > div + div {
+  margin-top: 20px;
+}
+
+@media (min-width: $small-breakpoint) {
+  .productBuy {
+    --product-font: #{$h1-fz-prod-mob};
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .productBuy {
+    --product-font: #{$h1-fz-prod-tab};
+  }
+}
+
+@media (min-width: $medium-breakpoint) {
+  .productBuy {
+    --product-font: #{$h1-fz-prod-md};
+  }
+  // h1 {
+  //   font-size: 50px;
+  // }
+}
+
+@media (min-width: $large-breakpoint) {
+  .productBuy {
+    --product-font: #{$h1-fz-prod-lar};
+  }
+}

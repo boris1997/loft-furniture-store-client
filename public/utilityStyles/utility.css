@@ -1,0 +1,242 @@
+/* $accentColorSec: #f9f5e8;
+$darkGrey: #151d28;
+$lightGrey: #edf0f5; */
+/*                   MIXINS                  */
+/* Flexbox
+// ================================================== */
+.d-f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-if {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* Flex direction */
+.fd-r {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/* Default */
+.fd-rr {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fd-cr {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+/* Flex wrap */
+.fw-n {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+/* Default */
+.fw-w {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.fw-wr {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+/* Justify content */
+.jc-fe {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.jc-fs {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* Default */
+.jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* Align items */
+.ai-fs {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ai-fe {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.ai-s {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+/* Default */
+.ai-b {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+/* Flex grow */
+.fg-0 {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+/* Default */
+.fg-1 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/* Flex shrink */
+.fs-0 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.fs-1 {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+/* Default */
+/* Flex basis */
+.fb-a {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+/* Default */
+.fb-0 {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+
+/* Align self */
+.as-a {
+  -ms-flex-item-align: auto;
+      align-self: auto;
+}
+
+/* Default */
+.as-fs {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.as-c {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.as-fe {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.as-s {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.as-b {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+/* Grid
+// ================================================== */
+.auto-product-grid {
+  --margin: 0;
+  --row-gap: 32px;
+  --column-gap: 32px;
+  --rows: 1;
+  --row-width: 1fr;
+  --auto: auto-fit;
+  --min: 140px;
+  --max: 155px;
+  margin-top: var(--margin);
+  display: grid;
+  grid-row-gap: var(--row-gap);
+  grid-column-gap: var(--column-gap);
+  grid-template: repeat(var(--rows), var(--row-width))/repeat(var(--auto), minmax(var(--min), var(--max)));
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+@media (min-width: 481px) {
+  .auto-product-grid {
+    --min: 170px;
+    --max: 195px;
+  }
+}
+@media (min-width: 768px) {
+  .auto-product-grid {
+    --min: 205px;
+    --max: 225px;
+  }
+}
+@media (min-width: 991px) {
+  .auto-product-grid {
+    --min: 230px;
+    --max: 260px;
+  }
+}
+@media (min-width: 1224px) {
+  .auto-product-grid {
+    --min: 250px;
+    --max: 275px;
+  }
+}
+/*# sourceMappingURL=utility.css.map */

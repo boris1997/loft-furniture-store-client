@@ -1,0 +1,29 @@
+@import "styles/vars&mixins.scss";
+
+.btn {
+  @include flexbox(row, center, center);
+  background-color: transparent;
+}
+.btn svg {
+  --icon-size: 40%;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.btn svg,
+.btn path {
+  --svg-color: #{$primaryColor};
+  svg,
+  path {
+    fill: var(--svg-color, $primaryColor);
+    stroke: var(--svg-color, $primaryColor);
+  }
+}
+
+.background {
+  background-color: $accentColor;
+  svg,
+  path {
+    --svg-color: #{$secColor};
+  }
+}

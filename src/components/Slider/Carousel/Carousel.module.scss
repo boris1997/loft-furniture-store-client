@@ -1,0 +1,31 @@
+@import "styles/vars&mixins.scss";
+
+.slider {
+  overflow: hidden;
+}
+.wrapper {
+  overflow: visible;
+  transition: transform 0.3s ease-in-out;
+  @include flexbox(row, space-between, center);
+  /*     overflow: hidden; */
+}
+.img {
+  width: 100%;
+}
+
+/*   .slide {
+  width: 100%;
+}
+*/
+.showOneSlide {
+  min-width: 100% !important;
+}
+.showTwoSlides {
+  min-width: 50%;
+}
+.showThreeSlides {
+  min-width: 33.333%;
+}
+.showFourSlides {
+  min-width: 25%;
+}

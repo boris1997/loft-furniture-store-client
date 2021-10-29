@@ -1,0 +1,58 @@
+@import "styles/vars&mixins.scss";
+
+.mainHeader {
+  margin-top: 20px;
+  // @include flexbox(column, space-between, flex-start);
+}
+
+.mainHeader > div {
+  overflow: visible;
+}
+
+.userMenu {
+  display: none;
+  width: 280px;
+  // margin-right: -26px;
+}
+
+.content {
+  gap: 40px;
+  @include flexbox(row, space-between, center);
+  flex-wrap: wrap;
+}
+
+.phoneIcon {
+  svg {
+    fill: $primaryColor;
+  }
+}
+
+@media (min-width: $small-breakpoint) {
+  // --btn-lar-height: 3;
+  /*     .btn {
+      width: 200;
+    } */
+}
+@media (min-width: $tablet-breakpoint) {
+  .content {
+    @include flexbox(row, space-between, center);
+  }
+  .userMenu {
+    display: block;
+  }
+
+  .phoneIcon {
+    display: none;
+  }
+  .searchBody {
+    flex-basis: initial;
+  }
+
+  .content {
+    flex-wrap: initial;
+  }
+  /*   .content {
+    @include flexbox(row, space-between, center);
+  } */
+  // --btn-lar-height
+}

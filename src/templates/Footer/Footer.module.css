@@ -1,0 +1,49 @@
+.footer {
+  padding-bottom: 100px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.basis {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.basis:nth-child(2) a {
+  float: right;
+}
+
+.basis:nth-child(3),
+.basis:last-child {
+  margin-top: 30px;
+}
+
+.basis:nth-child(3) ul {
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+}
+
+.basis:nth-child(3) li:first-child {
+  display: none;
+}
+
+.basis:nth-child(3) li:nth-child(2) {
+  margin-left: 0;
+}
+
+.basis:last-child ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=Footer.module.css.map */

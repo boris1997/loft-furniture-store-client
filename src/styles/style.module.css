@@ -1,0 +1,140 @@
+/* $accentColorSec: #f9f5e8;
+$darkGrey: #151d28;
+$lightGrey: #edf0f5; */
+/*                   MIXINS                  */
+/*normalize*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:root {
+  --m-fs: "Roboto";
+  --med-q-lar: 1024px;
+  --h1-fs: 50px;
+  --p-fs: 16px;
+  /*   --product-fz: 20px;
+  --product-fw: 500; */
+}
+
+h1 {
+  font-size: var(--h1-fs);
+}
+
+p {
+  font-size: var(--p-fs);
+}
+
+a {
+  font-size: var(--p-fs);
+}
+
+/* button {
+  font-size: var(13px);
+}
+ */
+@media (max-width: 991px) {
+  :root {
+    --h1-fs: 40px;
+    --p-fs: 15px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --h1-fs: 32px;
+    --p-fs: 14px;
+  }
+}
+@media (max-width: 481px) {
+  :root {
+    --h1-fs: 24px;
+    --p-fs: 13px;
+  }
+}
+/* @media (max-width: 768px) {
+  * {
+    font-size: 14px;
+  }
+} */
+/* @media (max-width: 650px) {
+  * {
+    font-size: 13px;
+  }
+} */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+b nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  color: #414141;
+  line-height: 1;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+/* .body {
+  height: 100vh;
+} */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: #414141;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+/*# sourceMappingURL=style.module.css.map */

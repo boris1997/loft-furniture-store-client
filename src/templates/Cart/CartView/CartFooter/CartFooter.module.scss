@@ -1,0 +1,18 @@
+@import "styles/vars&mixins.scss";
+
+.cartFooter {
+  margin-top: 40px;
+  span {
+    margin-right: 36px;
+  }
+}
+.btn {
+  width: 220px;
+}
+
+.content {
+  @include flexbox(row, flex-end, center);
+  span {
+    font-weight: 500;
+  }
+}

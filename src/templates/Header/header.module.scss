@@ -1,0 +1,10 @@
+@import "styles/vars&mixins.scss";
+
+.header {
+  ul > li > a > svg {
+    margin-right: 15px;
+  }
+  ul > li > a:hover > svg > path {
+    fill: black !important;
+  }
+}

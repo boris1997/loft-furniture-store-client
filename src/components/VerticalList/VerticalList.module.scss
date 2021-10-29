@@ -1,0 +1,13 @@
+@import "styles/vars&mixins.scss";
+
+.verticalList {
+  @include flexbox(column, flex-start, flex-start);
+  padding: 10px;
+  li {
+    white-space: nowrap;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+}

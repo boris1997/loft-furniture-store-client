@@ -1,0 +1,170 @@
+@import "styles/vars&mixins.scss";
+
+.btn {
+  --btn-lar-height: 32px;
+  --btn-medium-height: 30px;
+
+  outline: none;
+  background-color: transparent;
+  position: relative;
+  height: var(--btn-lar-height);
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    // transform: scale(1.02);
+    box-shadow: 0 0 10px rgb (0 0 0 / 30%);
+  } /*   &:active {
+    background-color: #0c3ab1 !important;
+  } */
+  &:not(:active) .btn__span {
+    transition: z-index 0s ease-in-out;
+    transition-delay: 0.25s;
+  }
+  &:active .span {
+    z-index: 1;
+  }
+
+  @media (min-width: $small-breakpoint) {
+    --btn-lar-height: 40px;
+    // --btn-lar-height: 3;
+    /*     .btn {
+      width: 200;
+    } */
+  }
+  @media (min-width: $tablet-breakpoint) {
+    --btn-lar-height: 40px;
+    // --btn-lar-height
+  }
+  @media (min-width: $medium-breakpoint) {
+    --btn-lar-height: 40px;
+  }
+  @media (min-width: $large-breakpoint) {
+    --btn-lar-height: 40px;
+    // h1 {
+    //   font-size: 50px;
+    // }
+  }
+}
+
+[data-size="full-width"] {
+  width: 100%;
+}
+
+[data-size="main"] {
+  width: 100px;
+  height: var(--btn-lar-height);
+  @media (min-width: $small-breakpoint) {
+    width: 120px;
+  }
+  @media (min-width: $tablet-breakpoint) {
+    width: 140px;
+    // --btn-lar-height
+  }
+  @media (min-width: $medium-breakpoint) {
+    width: 155px;
+  }
+  @media (min-width: $large-breakpoint) {
+    width: 170px;
+    // h1 {
+    //   font-size: 50px;
+    // }
+  }
+}
+[data-size="second"] {
+  width: 170px;
+  height: var(--btn-lar-height);
+}
+[data-size="third"] {
+  width: 170px;
+  height: var(--btn-lar-height);
+}
+[data-size="fourth"] {
+  width: 170px;
+  height: var(--btn-lar-height);
+}
+
+[data-size="full-width"] {
+  width: 100%;
+}
+
+[data-type="main"] {
+  background-color: $btn-color;
+  color: $secColor;
+  position: relative;
+}
+
+[data-type="secondary"] {
+  color: $primaryColor;
+  background-color: $secColor;
+}
+
+.noBorder {
+  border: none !important;
+}
+
+.main {
+  background-color: $btn-color;
+  color: $secColor;
+  position: relative;
+  &:after {
+    /*     @include position(
+      absolute,
+      url("../assets/svg/chevron-right.svg"),
+      0,
+      0,
+      auto,
+      18px,
+      auto
+      ); */
+    @include flexbox(row, center, center);
+
+    height: 12px;
+  }
+}
+
+.disabled {
+  border: 1px solid #245462;
+  color: #245462;
+  background-color: transparent;
+  cursor: default;
+}
+
+.span {
+  align-self: baseline;
+  margin-left: 28px;
+  z-index: 0;
+}
+
+.toggler {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.transparent {
+  background-color: transparent;
+  border: 1px solid $primaryColor;
+  &:active {
+    border: none;
+  }
+}
+
+.linear,
+.transparent {
+  color: $primaryColor;
+  @include flexbox(column, center, center);
+}
+
+.transparent .span,
+.linear .span {
+  margin-left: 0;
+  align-self: center;
+}
+
+.shadow {
+  color: $primaryColor;
+  box-shadow: 0px 10px 30px 0px rgba(36, 192, 226, 0.1);
+}
+
+.linear {
+  background: linear-gradient(90deg, #16d9e3 0%, #26c2e9 47%, #46aef7 100%);
+}

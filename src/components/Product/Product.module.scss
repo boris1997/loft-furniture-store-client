@@ -1,0 +1,120 @@
+@import "styles/vars&mixins.scss";
+
+.product {
+  width: 100%;
+}
+.header {
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  max-width: 200px;
+  width: 100%;
+  @include position(absolute, "", 0, 0, 0, 0, auto);
+}
+
+.btn {
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  /*  display: none; */
+}
+
+.btn .btn__span {
+  margin: auto;
+}
+.body {
+  // overflow: hidden;
+  position: relative;
+}
+
+.bodyWrapper {
+  max-width: 300px;
+  margin: auto;
+  @include flexbox(column, flex-start, flex-start);
+  h3 {
+    font-weight: 400;
+  }
+  p {
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  s {
+    opacity: 0.5;
+    margin-left: 10px;
+    font-size: 13px;
+  }
+
+  button,
+  s {
+    margin-top: 10px;
+  }
+}
+
+.text,
+.title {
+  text-align: center;
+}
+
+.title {
+  max-width: 155px;
+  margin: auto;
+  margin-top: 28px;
+  margin-bottom: 33px;
+}
+.text {
+  margin: auto;
+  max-width: 322px;
+}
+
+.text-short {
+  max-width: 312px;
+}
+.img {
+  margin: auto;
+  display: block;
+}
+
+.wish {
+  display: flex;
+  justify-content: flex-end;
+}
+.active {
+  svg,
+  path {
+    fill: $accentColor;
+    stroke: $accentColor;
+  }
+}
+
+@media (min-width: $small-breakpoint) {
+  .header {
+    height: 170px;
+  }
+  /*     .btn {
+      width: 200;
+    } */
+}
+@media (min-width: $tablet-breakpoint) {
+}
+
+@media (min-width: $medium-breakpoint) {
+}
+
+@media (min-width: $large-breakpoint) {
+  .header {
+    // height: 200px;
+  }
+
+  .img {
+    max-width: 260px;
+  }
+
+  .bodyWrapper {
+    max-width: 265px;
+  }
+  // h1 {
+  //   font-size: 50px;
+  // }
+}

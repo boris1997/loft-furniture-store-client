@@ -1,0 +1,11 @@
+@import "styles/vars&mixins.scss";
+
+.btn {
+  display: flex;
+  a {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: $accentColor;
+    color: $secColor;
+  }
+}

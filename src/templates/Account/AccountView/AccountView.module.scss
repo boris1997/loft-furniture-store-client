@@ -1,0 +1,79 @@
+@import "styles/vars&mixins.scss";
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  // align-content: flex-start;
+  gap: 35px;
+
+  div h3 {
+    font-size: 14px;
+    margin: 8px 0px;
+    text-align: left;
+  }
+
+  span,
+  div {
+    font-size: var(--p-fs);
+  }
+}
+
+.item {
+  /*   margin-top: 30px; */
+  > div + div {
+  }
+
+  > div > div:nth-child(2) {
+    margin-top: 15px;
+  }
+}
+.bonus,
+.orders {
+  flex-basis: 100%;
+}
+
+.data,
+.discounts {
+  --margin-acData: 20px;
+  /*   flex-basis: calc(50% - var(--margin-acData));
+  min-width: 50%;
+  max-width: 100%; */
+  flex: 1 300px;
+  > div {
+    // margin: var(--margin-acData);
+  }
+}
+
+@media (min-width: $small-breakpoint) {
+  .content {
+    gap: 45px;
+    div h3 {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .content {
+    gap: 55px;
+    div h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: $medium-breakpoint) {
+  .content {
+    gap: 65px;
+    div h3 {
+      font-size: 17px;
+    }
+  }
+}
+@media (min-width: $large-breakpoint) {
+  .content {
+    div h3 {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import "styles/vars&mixins.scss";
+
+$sidebar-title-fz-mob: 22px;
+$sidebar-title-fz-tab: 26px;
+$sidebar-title-fz-md: 30px;
+$sidebar-title-fz-lar: 34px;
+
+.sidebar {
+  @include position(fixed, "", 0, 0, 0, 0, auto);
+  background-color: $secColor;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+}
+
+.header button:first-child {
+  width: 40px;
+  height: 40px;
+}
+
+.header div:nth-child(2) {
+  height: 40px;
+}
+
+.title {
+  --sidebar-title: 20px;
+  display: flex;
+  margin-top: 25px;
+  font-size: var(--sidebar-title);
+}
+
+.menu,
+.body {
+  margin-top: 15px;
+}
+
+.menu ul {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu ul li {
+  width: 100%;
+  margin-left: 0;
+  border-bottom: 1px solid $borderColor;
+}
+
+/* .menu ul li {
+} */
+
+.menu ul a {
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.menu ul svg {
+  margin-right: 10px;
+}
+
+.menuContent {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+@media (min-width: $small-breakpoint) {
+  .title {
+    --sidebar-title: #{$sidebar-title-fz-mob};
+    // --sidebar-title: 26px;
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .title {
+    --sidebar-title: #{$sidebar-title-fz-tab};
+    // --sidebar-title: 26px;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: $medium-breakpoint) {
+  .title {
+    --sidebar-title: #{$sidebar-title-fz-md};
+  }
+}
+
+@media (min-width: $large-breakpoint) {
+  .title {
+    --sidebar-title: #{$sidebar-title-fz-lar};
+  }
+}

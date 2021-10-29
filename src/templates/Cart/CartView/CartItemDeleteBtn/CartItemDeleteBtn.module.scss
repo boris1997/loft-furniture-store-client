@@ -1,0 +1,27 @@
+@import "styles/vars&mixins.scss";
+
+.cartItemDeleteBtn {
+  background-color: $beigeColor;
+  @include flexbox(row, center, center);
+  cursor: pointer;
+  flex: 0.3;
+  /*   width: 95px; */
+  @media (min-width: $small-breakpoint) {
+    flex: 0.25;
+  }
+  @media (min-width: $tablet-breakpoint) {
+    flex: 0.2;
+  }
+}
+
+@media (min-width: $medium-breakpoint) {
+  .title {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: $large-breakpoint) {
+  .title {
+    font-size: 20px;
+  }
+}

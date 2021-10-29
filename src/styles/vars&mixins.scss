@@ -1,0 +1,96 @@
+//colors
+$primaryColor: #414141;
+$accentColor: #245462;
+$beigeColor: #f9f9f9;
+$borderColor: #e5e5e5;
+$secColor: #ffffff;
+$btn-color: #245462;
+$box-shadow: 0px 2px 4px rgb(0 0 0 / 7%);
+
+//card-borders
+$sm-border-r: 5px;
+$md-border-r: 10px;
+$bg-border-r: 15px;
+
+// Header Fonts
+
+$h1-lar-scn: 50px;
+$h1-md-scn: 40px;
+$h1-tab-scn: 32px;
+$h1-mob-scn: 24px;
+
+$h2-lar-scn: px;
+$h2-md-scn: 40px;
+$h2-tab-scn: 32px;
+$h2-mob-scn: 24px;
+
+// Paragraph fonts
+$p-mn-lar-cn: 16px;
+$p-mn-md-scn: 15px;
+$p-mn-tab-scn: 14px;
+$p-mn-mob-scn: 13px;
+
+// Breakpoints
+// Pc-first
+$large-breakpoint: 1224px;
+$medium-breakpoint: 991px;
+$tablet-breakpoint: 768px;
+$small-breakpoint: 481px;
+// Pc-first
+
+/* $accentColorSec: #f9f5e8;
+$darkGrey: #151d28;
+$lightGrey: #edf0f5; */
+
+// #CF4363 #F9F871
+
+/*                   MIXINS                  */
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    font-display: swap;
+  }
+}
+
+@mixin grid($margin, $rowGap, $columnGap, $rows, $rowWidth, $auto, $min, $max) {
+  margin-top: $margin;
+  display: grid;
+  grid-row-gap: $rowGap;
+  grid-column-gap: $columnGap;
+  grid-template: repeat($rows, $rowWidth) / repeat($auto, minmax($min, $max));
+}
+
+@mixin position($position, $content, $top, $bottom, $left, $right, $margin) {
+  position: $position;
+  content: $content;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  margin: $margin;
+}
+
+@mixin flexbox($direction, $content, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    /*     src: url("../fonts/") format("woff"), */
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}

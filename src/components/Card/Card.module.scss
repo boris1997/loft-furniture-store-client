@@ -1,0 +1,16 @@
+@import "styles/vars&mixins.scss";
+
+.card {
+  background-color: var(--card-background, $secColor);
+  border-radius: var(--card-bradius, $sm-border-r);
+  box-shadow: $box-shadow;
+}
+
+.card-dark {
+  --card-background: $primaryColor;
+}
+
+/* .sm-radius {
+}
+
+. */

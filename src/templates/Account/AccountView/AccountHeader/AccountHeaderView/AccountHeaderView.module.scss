@@ -1,0 +1,9 @@
+@import "styles/vars&mixins.scss";
+
+.body {
+  @include flexbox(row, flex-start, center);
+}
+
+.title {
+  text-align: left;
+}
