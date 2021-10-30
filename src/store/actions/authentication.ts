@@ -48,8 +48,8 @@ export const autoAuthUser = () => {
 
 export const login = (userData: IUserData, stringCart: string[], stringWishList: string[]) => {
     return (dispatch: Dispatch<AuthActions | Dispatch<any>>) => {
-        requestLogin(userData).then(({ data: { accessToken, user } }) => {
-
+        requestLogin(userData).then(({ data: { accessToken, user, refreshToken } }) => {
+            console.log(accessToken, user, refreshToken)
             dispatch(synchronizeClientServerCarts(stringCart, user.id));
             dispatch(synchronizeClientServerWishLists(stringWishList, user.id));
             dispatch(setLoginData(accessToken, user))
